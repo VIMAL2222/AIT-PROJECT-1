@@ -1,0 +1,87 @@
+.top-products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  position: relative;
+  top: 1300px;
+  gap: 25px;
+  padding: 40px;
+}
+
+.top-product-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-product-image {
+  width: 100;
+  height: 150px;
+  position: relative;
+  left: 20%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.top-product-details {
+  padding: 10px;
+  position: relative;
+  width: fit-content;
+  color: #d0d0d0 ;
+}
+
+.top-product-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.top-product-description {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+/* Add this to your CSS file */
+
+.red-rating .MuiRating-iconFilled {
+  color: #ff3333; /* Red color for filled stars */
+}
+
+.red-rating .MuiRating-iconEmpty {
+  color: #ffcccc; /* Lighter red for empty stars, optional */
+}
+
+.top-product-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: grey;
+}
+.top-product-current-price {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #d0d0d0 ;
+}
+
+.top-product-original-price {
+  font-size: 0.9em;
+  text-decoration: line-through;
+  color: #777;
+  margin-left: 5px;
+}
+
+.top-add-to-cart-button {
+  background-color: red;
+  color: white;
+  padding: 10px 90px;
+  position: relative;
+  left: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.top-add-to-cart-button:hover {
+  background-color: #0056b3;
+}
