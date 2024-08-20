@@ -1,0 +1,223 @@
+.navbar{
+  position: fixed;
+  top: 0%;
+  left: -0%;
+  width: 100%;
+  margin-right: 200px;
+  height: 40px; /* Adjust based on your navbar's height */
+  background-color: black; /* Match this to your design */
+  padding: 10px 10px;
+}
+.navbar-brand{
+    text-decoration: none;
+    color: rgb(146, 144, 144);
+    font-size: 28px;
+    font-weight: bold;
+}
+/* General styling for the right navigation part */
+.nav-right {
+   display: inline;
+   float: right;
+   padding-right: 10px;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item {
+    margin-left: 20px; /* Adjust spacing between icons */
+  }
+  
+  .nav-icon {
+    font-size: 24px; /* Adjust icon size */
+    color: #fff; /* Adjust icon color */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+  }
+  
+  /* Optional: Adding hover effect */
+  .nav-icon:hover {
+    color: #ccc; /* Change color on hover */
+  }
+
+  /* Ensure the modal appears on top of other content */
+.account-modal {
+  background-color: #222; /* Dark background similar to the image */
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #ddd;
+  position: absolute;
+  width: 250px; /* Adjust based on your design */
+  top: 50px; /* Align under the navbar */
+  right: 10px; /* Align with the right side of the screen */
+  z-index: 1050; /* Higher z-index to ensure it appears on top */
+}
+
+/* Example: Reduce z-index of header image if necessary */
+.header-image {
+  z-index: 100; /* Lower value to ensure it stays below the modal */
+}
+
+/* Optional: Adjust navbar or other content z-index */
+.navbar {
+  z-index: 1020; /* Ensure the navbar has a higher z-index than header */
+}
+
+/* Maintain the rest of your modal styles */
+.account-modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.account-modal-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.account-modal-body p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.account-modal-body .btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #777;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  width: 100%; /* Make the button take the full width */
+  text-align: left;
+}
+
+.account-modal-body .btn:hover {
+  background-color: #444;
+}
+
+.account-modal-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.account-modal-body ul li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.account-modal-body ul li:hover {
+  color: white;
+}
+
+  
+  /* LoginForm.css */
+.login-form {
+  color: white;
+  padding: 20px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: white;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.alternative-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.alternative-login p {
+  margin-bottom: 10px;
+}
+
+.alternative-login .btn {
+  margin: 5px;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  border: 1px solid #444;
+  background-color: #222;
+}
+
+.create-account {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.create-account a {
+  color: red;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+/* Account Modal Wrapper */
+.account-modal-wrapper {
+  position: fixed;
+  top: 50px; /* Align with the modal */
+  right: 10px; /* Align with the right side of the screen */
+  z-index: 1050; /* Higher z-index to ensure it appears on top */
+}
+
+/* Ensure the account modal appears on top of other content */
+.account-modal {
+  background-color: #222; /* Dark background similar to the image */
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #ddd;
+  width: 250px; /* Adjust based on your design */
+}
+
+/* Centered Login Form Modal */
+.login-form-modal {
+  background-color: #222; /* Dark background similar to the image */
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #ddd;
+  max-width: 500px; /* Adjust based on your design */
+  margin: auto;
+  top: 50%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+}
+
+/* Ensure the navbar has a higher z-index than the account modal */
+.navbar {
+  z-index: 1020; /* Ensure the navbar has a higher z-index than the modal */
+}

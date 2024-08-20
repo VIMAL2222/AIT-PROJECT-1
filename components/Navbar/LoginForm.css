@@ -1,0 +1,113 @@
+/* LoginForm.css */
+.login-form {
+  color: white;
+  padding: 20px;
+  
+
+   /* Add position relative to position the close button */
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: white;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #dd1313;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.alternative-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.alternative-login p {
+  margin-bottom: 10px;
+}
+
+.alternative-login .btn {
+  margin: 5px;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  border: 1px solid #444;
+  background-color: #222;
+}
+
+.create-account {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.create-account a {
+  color: red;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+.login-form .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #ddd;
+}
+
+.login-form .close-btn:hover {
+  color: #fff;
+}
+
+/* Centered Login Form Modal */
+.login-form-modal {
+  background-color: #222; /* Dark background similar to the image */
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #ddd;
+  max-width: 800px; /* Adjust based on your design */
+  margin: 0; /* Reset margin */
+  top: 60px; /* Position under the navbar */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  position: fixed; /* Fixed positioning for consistent placement */
+  z-index: 1100; /* Ensure it appears above other content */
+}
+
+/* Ensure the close button is properly styled */
+.login-form .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #ddd;
+}
+
+.login-form .close-btn:hover {
+  color: #fff;
+}

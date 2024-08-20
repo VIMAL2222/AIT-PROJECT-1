@@ -1,11 +1,21 @@
 import React from 'react'
-import './App.css';
+import Header from './components/Header/Header'
+import Navbar from './components/Navbar/Navbar'
+import Featuredproducts from './components/Featuredproducts/Featuredproducts'
+import Topproducts from './components/Topproducts/Topproducts'
+import App from '../src/App.css'; 
 
-const App = () => {
+
+function Appi () {
   return (
-    <div>
-    </div>
-  )
+    
+    <boby className="body">
+        <Header/>
+        <Navbar/>
+        <Featuredproducts/>
+        <Topproducts/>
+    </boby>
+  );
 }
 
-export default App
+export default Appi

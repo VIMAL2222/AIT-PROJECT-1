@@ -1,0 +1,97 @@
+.header {
+  position: relative;
+  text-align: left;
+  color: white;
+  }
+
+.slideshow {
+  position: relative;
+  margin-top: 100px; /* Adjust to match the navbar height */
+  z-index: 1; /* Lower than the navbar */
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.show {
+  display: block;
+}
+
+.header-image img {
+  width: 500px;
+  position: absolute;
+  left: 60%;
+}
+
+.header-content {
+  position: absolute;
+  width: 500px;
+  margin-top: 10%;
+  left: 20%;
+}
+
+.pricing .current-price {
+  font-size: 1.5em;
+  color: #e60000; /* Red color for the current price */
+}
+
+.shop-now {
+  background-color: #e60000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.over-ear-text {
+  font-size: 10rem;
+  font-weight: bold;
+  color: rgba(180, 180, 180, 0.1); /* Light color for background text */
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.product-name {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.product-description {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.dots-container {
+  text-align: center;
+  position: absolute;
+  bottom: -600px; /* Adjust as needed */
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
