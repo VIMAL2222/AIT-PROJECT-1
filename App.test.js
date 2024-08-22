@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders all Shop Now buttons', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const buttonElements = screen.getAllByText(/Shop Now/i);
+  expect(buttonElements.length).toBeGreaterThan(0); // Or check for a specific number
 });

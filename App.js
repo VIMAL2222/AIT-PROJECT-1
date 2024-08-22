@@ -3,19 +3,21 @@ import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 import Featuredproducts from './components/Featuredproducts/Featuredproducts'
 import Topproducts from './components/Topproducts/Topproducts'
+import Ouradvantages from './components/Ouradvantages/Ouradvantages'
+import Footer from './components/Footer/Footer'
 import App from '../src/App.css'; 
 
-
-function Appi () {
+function Appi() {
   return (
-    
-    <boby className="body">
-        <Header/>
-        <Navbar/>
-        <Featuredproducts/>
-        <Topproducts/>
-    </boby>
+    <body className="body">
+      <Header />
+      <Navbar />
+      <Featuredproducts />
+      <Topproducts />
+      <Ouradvantages />
+      <Footer />
+    </body>
   );
 }
 
-export default Appi
+export default Appi;

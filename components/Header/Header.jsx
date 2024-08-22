@@ -38,7 +38,8 @@ const Header = () => {
                 <span className="current-price">{slide.price}</span>
                 <span className="original-price">{slide.originalPrice}</span>
               </div>
-              <button className="shop-now">Shop Now</button>
+              <button className="shop-now" data-testid="primary-shop-now">  Shop Now</button>
+
             </div>
             <div className="header-image">
               <img src={slide.img} alt={slide.text2} />

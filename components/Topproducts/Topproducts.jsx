@@ -11,11 +11,12 @@ import jbl100Image from '../../Assets/images/products/jbl100-1.png';
 import sony1000xm4Image from '../../Assets/images/products/sony1000xm4-1.png';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+import { FaArrowRight } from "react-icons/fa6";
 
 
 const ProductCard = ({ product }) => {
   return (
-       <div className="top-product-card">
+      <div className="top-product-card">
       <img src={product.image} alt={product.name} className="top-product-image" />
       {/* Directly using the Rating component */}
       <div className="top-product-rating red-rating">
@@ -119,6 +120,7 @@ const Topproducts = () => {
       originalPrice: '₹4,990',
       image: boat255rImage,
     },
+  
   ];
 
   return (
@@ -127,7 +129,11 @@ const Topproducts = () => {
       {products.map((product, index) => (
         <ProductCard key={index} product={product} />
       ))}
+       <div className="browse-all-products">
+        <div><h3 className="browse-all-products-text">Browse All Products <FaArrowRight /></h3></div>
+      </div>
     </div>
+    
   );
 };
 

@@ -5,11 +5,15 @@ import { FaCartShopping } from "react-icons/fa6";
 import { RiAccountCircleFill } from "react-icons/ri";
 import Modal from 'react-bootstrap/Modal';
 import LoginForm from "../Navbar/LoginForm";
+import productsData from '../../productsData'; // Import the product data
 
 function Navbar() {
   const [showAccount, setShowAccount] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [showSearch, setShowSearch] = useState(false); // State to toggle search bar visibility
 
   const handleLoginClick = () => {
     setShowAccount(false); // Hide the account modal
@@ -34,6 +38,24 @@ function Navbar() {
     setTimeoutId(id); // Store the timeout ID to clear if needed
   };
 
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearchTerm(value);
+
+    if (value.length > 0) {
+      const filtered = productsData.filter(product =>
+        product.title.toLowerCase().includes(value.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+    } else {
+      setFilteredProducts([]);
+    }
+  };
+
+  const handleSearchIconClick = () => {
+    setShowSearch(!showSearch); // Toggle the search bar visibility
+  };
+
   return (
     <>
       <div className="container">
@@ -43,7 +65,28 @@ function Navbar() {
             <span className='nav-right'>
               <ul className='nav-list'>
                 <li className='nav-item'>
-                  <IoMdSearch className='nav-icon' />
+                  <IoMdSearch className='nav-icon' onClick={handleSearchIconClick} />
+                  {/* Search Input */}
+                  {showSearch && (
+                    <input
+                      type="text"
+                      placeholder="Search for products..."
+                      value={searchTerm}
+                      onChange={handleSearch} className='IoMDSearch-input'
+                      style={{ padding: '10px', width: '300px', marginLeft: '10px' }}
+                    />
+                  )}
+                  {/* Search Results Dropdown */}
+                  {showSearch && filteredProducts.length > 0 && (
+                    <ul style={{ listStyleType: 'none', paddingLeft: 0, marginTop: '10px', backgroundColor: '#fff', position: 'absolute', zIndex: 1000, width: '300px', border: '1px solid #ccc' }}>
+                      {filteredProducts.map(product => (
+                        <li key={product.id} style={{ padding: '10px', borderBottom: '1px solid #ccc' }}>
+                          <img src={product.images[0]} alt={product.title} style={{ width: '50px', marginRight: '10px' }} />
+                          {product.title}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
                 <li className='nav-item'>
                   <FaCartShopping className='nav-icon' />

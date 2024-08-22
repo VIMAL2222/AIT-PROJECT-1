@@ -1,6 +1,6 @@
 .top-products-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   position: relative;
   top: 1300px;
   gap: 25px;
@@ -84,4 +84,21 @@
 
 .top-add-to-cart-button:hover {
   background-color: #0056b3;
+}
+.browse-all-products{
+  color: #ff3333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  justify-content: center;
+  
+}
+.browse-all-products-text{
+  color: #a09999;
+  position: relative;
+  left: 40px;
+  top: 150px;
 }
